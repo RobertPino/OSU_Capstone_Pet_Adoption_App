@@ -1,0 +1,102 @@
+<body onload='profileOnload("{{this.animal.type}}", "{{this.animal.dispKids}}", "{{this.animal.dispDogs}}","{{this.animal.dispCats}}", "{{this.animal.dispHouse}}", "{{this.animal.dispHouse}}")'>
+
+<br><br>
+<div><h3><strong>{{this.warning}}</strong></h3></div>
+<div class="container">
+  <!--name row-->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="meet">Meet</div>
+      <div class="petName"> {{this.animal.petName}}</div>
+    </div>
+  </div>
+
+<br>
+<!--info row-->
+<div class="row">
+  <!--picture column-->
+  <div class="col-md-4">
+    <div class="profileHead">That's Me!</div>
+    <div class="colColor12"><br>
+      <img src={{this.animal.pic}} class="imgPet" >
+  </div>
+  </div>
+    
+<!--basic info column-->
+<div class="col-md-4">
+  <div class="profileHead"> About Me</div>
+  <div class="colColor2"><br>
+  <!--this section can be cleaner with some js logic-->
+    <div class="profileBody">Type of Pet:<br></div>
+  
+    <p id="printDogImage"><img src= "\img\dog.png" width="125" height="auto" class="mx-auto d-block" ></p>
+
+    <p id="printCatImage"><img src= "\img\cat.png" width="125" height="auto" class="mx-auto d-block" ></p>
+
+    <p id="printOtherImage"><img src= "\img\other.png" width="125" height="auto" class="mx-auto d-block" ></p>
+    <br>
+    <div class="profileBody">Breed:</div>
+    <div class="dataOutput">{{this.animal.breed}}</div>
+    <br><br>
+    <div class="profileBody">Birthday:</div>
+    <div class="dataOutput">{{this.animal.birthday}}</div>
+    <br>
+</div>
+</div>
+
+<!--disposition column-->
+<div class="col-md-4">
+  <div class="profileHead"> Good With</div>
+  <div class="colColor1"><br>
+  <!--by default, set to print every disposition. the js function to eliminate false disposition clears out the false ones-->
+      <p id="printKids"><img src= "\img\dispKids.png" width="75" height="auto" class="mx-auto d-block" ></p>
+      <p id="printDogs"><img src= "\img\dispDogs.png" width="75" height="auto" class="mx-auto d-block" ></p>
+      <p id="printCats"><img src= "\img\dispCats.png" width="75" height="auto" class="mx-auto d-block" ></p>
+      <p id="printHouse"><img src= "\img\dispHouse.jpg" width="75" height="auto" class="mx-auto d-block" ></p>
+      <p id="printLeash"><img src= "\img\dispLeash.png" width="75" height="auto" class="mx-auto d-block" ></p>
+      
+      </div>
+      </div>
+</div>
+      
+      <br>
+<!--bio row-->
+    <div class="row">
+      <div class="col-sm 8">
+      <div class="storyHead"> My Story</div>
+      <div class="colColor3">
+      <br>
+          <div class="dataOutput">{{this.animal.description}}</div>
+      </div>
+    </div>
+    </div>
+    <br>
+
+<!--next, previous, adopt buttons-->
+
+  <div class="row">
+    <div class="col text-center">
+    {{!-- <div class="col-sm 4">
+    <button class="btn btn-primary  mx-auto d-block" style="color: white;">Previous Pet</button>
+    </div> --}}
+    
+    <p = "printButton">
+    <form method="POST" action="/profile/{{this.animal.id}}">
+        <input type="hidden" id="idToken" name="idToken">
+        <button class="btn btn-primary btn-lg  mx-auto d-block" style="color: white;">Bring Me Home!</button>
+        {{!-- <input type="submit">Bring me Home!</button> --}}
+    </form>
+    </p>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg  mx-auto d-block"> <a href="/search" style="color: white;"> Search Pets </a></button>
+
+
+    {{!-- <div class="col-sm 4">
+    <button class="btn btn-primary  mx-auto d-block" style="color: white;">Previous Pet</button>
+    </div> --}}
+  </div>
+  </div>
+
+<div> <p style= "font-size: xx-small;">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> <p></p></div>
+
+</body>

@@ -1,0 +1,121 @@
+<body>
+<div class="container">
+<form method="POST" action="/adopt/{{this.animal.id}}">
+  <div class="form-row">
+    <div class="form-group col-sm-6">
+      <div class="meet">Application to Adopt:</div>
+      <div class="petName"> {{this.animal.petName}}</div>
+    </div>
+  </div>
+
+    {{!-- Information to send in user ID --}}
+    
+    <!--your name-->
+    <body onload='getInfo()'>
+    <div class="form-row">
+      <div class="form-group col-sm-6  adoptName">
+        <div class="formTitles"><label for="adopterName">Your Name</label></div>
+        <input type="text" class="form-control" id="adopterName" disabled placeholder="{{this.user.name}}">
+        <input type="text" class="form-control" name="adopterName" hidden value="{{this.user.name}}">
+      </div>
+    </div>
+
+    <!--your email-->
+    <div class="form-row">
+      <div class="form-group col-sm-6 adoptEmail">
+        <div class="formTitles"><label for="adopterEmail">Your Email</label></div>
+        <input type="text" class="form-control" id="adopterEmail" disabled placeholder="{{this.user.email}}">
+        <input type="text" class="form-control" name="adopterEmail" hidden value="{{this.user.email}}">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-sm-4 refOne">
+        <div class="formTitles">Reference One<label for="refOne"></label></div>
+        <input type="text" class="form-control" id="refOne" name="refOne" placeholder="Name" required>
+        <input type="text" class="form-control" id="phoneOne" name="phoneOne" placeholder="Phone Number" required>
+      </div>
+    </div>
+
+<!--owned pets?-->
+<div class="form-row">
+    <div class="form-group col-md-86 adoptBefore">
+      <div class="formTitles">Have you had pets?<label for="petBefore"></label></div>
+       <div class="formTitles"><label for="type"></label></div>
+        <select class="custom-select" id="petBefore" name="petBefore" placeholder="Have you?" required> 
+          <option></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+    </div>
+    
+<!--experience with pets-->
+<div class="form-row">
+      <div class="form-group col-md-12 adoptExp">
+      <div class="formTitles">What is your experience dealing with pets?<label for="petBefore"></label></div>
+      <div class="addHead"></div>
+        <textarea class="form-control" id="experience" name ="experience" rows="3" required></textarea>
+      </div>
+</div>
+
+<!--why interested in the pet-->
+<div class="form-row">
+    <div class="form-group col-md-12 adoptInterest">
+        <div class="formTitles">Why are you interested in this pet?<label for="whyInterested"></label></div>
+      <div class="addHead"></div>
+        <textarea class="form-control" id="whyInterested" name ="whyInterested" rows="3" required></textarea>
+      </div>
+</div>
+
+<!--your household, your needs-->
+<div class="form-row">
+<div class="form-group col-md-6 adoptHave">
+  <div class="formTitles">Which of the following do you have at home?<label for="petHome"></label></div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="hasKids" name="hasKids">
+          <label class="form-check-label dispText" for="hasKids">Kids</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="hasDogs" name="hasDogs"> 
+          <label class="form-check-label dispText" for="hasDogs">Dogs</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dispCats" name="hasCats">
+          <label class="form-check-label dispText" for="hasCats">Cats</label>
+        </div>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group col-md-4 adoptNeed">
+  <div class="formTitles">Which do you require your pet to be?<label for="petRequirements"></label></div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="mustHouse" name="mustHouse">
+          <label class="form-check-label dispText" for="mustHouse">House trained</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="mustLeash" name="mustLeash"> 
+          <label class="form-check-label dispText" for="mustLeash">Leash Trained</label>
+        </div>
+</div>
+</div>
+
+
+<!--END OF CODE-->
+    <div class="d-flex justify-content-center align-items-center">
+      <button class="btn btn-primary" type="submit"> <a style="color: white;"></a>Submit your application!</a></button>
+    </div>
+
+    </form>
+</div>
+<br><br><br>
+</div>
+</div>
+</body>
+
+
+

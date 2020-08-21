@@ -1,0 +1,99 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:27
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-ball:before { content: "\f100"; }
+.flaticon-bird:before { content: "\f101"; }
+.flaticon-bird-cage:before { content: "\f102"; }
+.flaticon-bone:before { content: "\f103"; }
+.flaticon-bowl:before { content: "\f104"; }
+.flaticon-brush:before { content: "\f105"; }
+.flaticon-cage:before { content: "\f106"; }
+.flaticon-cat:before { content: "\f107"; }
+.flaticon-cleaner:before { content: "\f108"; }
+.flaticon-collar:before { content: "\f109"; }
+.flaticon-dog:before { content: "\f10a"; }
+.flaticon-dog-poop:before { content: "\f10b"; }
+.flaticon-fish:before { content: "\f10c"; }
+.flaticon-fish-bowl:before { content: "\f10d"; }
+.flaticon-hamster:before { content: "\f10e"; }
+.flaticon-hamster-wheel:before { content: "\f10f"; }
+.flaticon-leash:before { content: "\f110"; }
+.flaticon-litter-box:before { content: "\f111"; }
+.flaticon-pawprint:before { content: "\f112"; }
+.flaticon-pet-bed:before { content: "\f113"; }
+.flaticon-pet-food-bag:before { content: "\f114"; }
+.flaticon-pet-food-can:before { content: "\f115"; }
+.flaticon-pet-friendly:before { content: "\f116"; }
+.flaticon-pet-house:before { content: "\f117"; }
+.flaticon-pet-shop:before { content: "\f118"; }
+.flaticon-scissors:before { content: "\f119"; }
+.flaticon-scoop:before { content: "\f11a"; }
+.flaticon-tick:before { content: "\f11b"; }
+.flaticon-turtle:before { content: "\f11c"; }
+.flaticon-veterinarian:before { content: "\f11d"; }
+    
+    $font-Flaticon-ball: "\f100";
+    $font-Flaticon-bird: "\f101";
+    $font-Flaticon-bird-cage: "\f102";
+    $font-Flaticon-bone: "\f103";
+    $font-Flaticon-bowl: "\f104";
+    $font-Flaticon-brush: "\f105";
+    $font-Flaticon-cage: "\f106";
+    $font-Flaticon-cat: "\f107";
+    $font-Flaticon-cleaner: "\f108";
+    $font-Flaticon-collar: "\f109";
+    $font-Flaticon-dog: "\f10a";
+    $font-Flaticon-dog-poop: "\f10b";
+    $font-Flaticon-fish: "\f10c";
+    $font-Flaticon-fish-bowl: "\f10d";
+    $font-Flaticon-hamster: "\f10e";
+    $font-Flaticon-hamster-wheel: "\f10f";
+    $font-Flaticon-leash: "\f110";
+    $font-Flaticon-litter-box: "\f111";
+    $font-Flaticon-pawprint: "\f112";
+    $font-Flaticon-pet-bed: "\f113";
+    $font-Flaticon-pet-food-bag: "\f114";
+    $font-Flaticon-pet-food-can: "\f115";
+    $font-Flaticon-pet-friendly: "\f116";
+    $font-Flaticon-pet-house: "\f117";
+    $font-Flaticon-pet-shop: "\f118";
+    $font-Flaticon-scissors: "\f119";
+    $font-Flaticon-scoop: "\f11a";
+    $font-Flaticon-tick: "\f11b";
+    $font-Flaticon-turtle: "\f11c";
+    $font-Flaticon-veterinarian: "\f11d";

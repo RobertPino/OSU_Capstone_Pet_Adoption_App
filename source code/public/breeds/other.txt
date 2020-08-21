@@ -1,0 +1,1 @@
+<input type="text" class="form-control" id="otherTypeDiv" name="typeOther" placeholder="" required>

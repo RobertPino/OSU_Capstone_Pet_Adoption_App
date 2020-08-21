@@ -1,0 +1,115 @@
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left{
+  width: 35vw;
+}
+
+.middle {
+  width: 20vw;
+}
+
+.right {
+  width: 20vw;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.photoSize {
+  max-width: 20vw;
+  align-content: middle;
+  height: auto;
+}
+
+.topHeader {
+    text-align: left;
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      x-large;
+    font-weight:    bold;
+}
+.dataHeader {
+    text-align: left;
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      large;
+    font-weight:    bold;
+}
+
+.heldData {
+  text-align: left;
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      medium;
+}
+
+.myData {
+  text-align: left;
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      medium;
+}
+
+.dispData {
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      medium;
+}
+
+.adoptMeButton{
+background-color: blue;
+align-content: middle;
+}
+
+.adoptedButton{
+  background-color:orangered;
+align-content: large;
+}
+
+.adoptMeButton:active{
+align-content: middle;
+box-shadow: 0 5px #555;
+transform: translateY(4px);
+}
+
+.adoptedButton:active{
+align-content: middle;
+box-shadow: 0 5px #555;
+transform: translateY(4px);
+}
+
+.backButton{
+	align-content: left;
+}
+
+.forwardButton{
+	align-content: right;
+}
+
+
+
+.petBox{
+padding: 20px;
+border: 1px solid black;
+height: 300px;
+}
+
+.petStoryBox{
+padding: 20px;
+border: 1px solid black;
+height: 100px;
+}
+
+.buttonBox{
+padding: 5px;
+border: 1px solid black;
+height: 110px;
+}
+
+img {
+  max-width: 180px;
+}
+

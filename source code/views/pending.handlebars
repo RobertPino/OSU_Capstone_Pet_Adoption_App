@@ -1,0 +1,26 @@
+{{!-- These two values should be greyed out on the form because they are linked to google account --}}
+
+<div>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr class="d-flex">
+                <th scope="col" class="col-3">Adopter Name</th>
+                <th scope="col" class="col-3">Adopter Email</th>
+                <th scope="col" class="col-2">Pet Name</th>
+                <th scope="col" class="col-3">Pet Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each pending}}
+                <tr scope="row" class="d-flex">
+                    <td scope="col" class="col-3">{{this.adopterName}}</td>
+                    <td scope="col" class="col-3">{{this.adopterEmail}}</td>
+                    <td scope="col" class="col-2">{{this.petName}}</td>
+                    <td scope="col" ><img src="{{this.pic}}" alt="" class="imgPending" style="width:25%"></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+

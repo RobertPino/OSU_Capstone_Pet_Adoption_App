@@ -1,0 +1,32 @@
+<body onload="addID()">
+	<div><h3><strong>{{this.warning}}</strong></h3></div>
+    <div>
+	<table class="table table-striped table-bordered">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">Email</th>
+				<th scope="col">Sub</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each admins}}
+				<tr scope="row">
+					<td>{{this.name}}</td>
+					<td>{{this.email}}</td>
+					<td>{{this.sub}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+
+    <form method="POST" action="/admin">
+        <input type="hidden" id="idToken" name="idToken">
+        <div class="d-flex justify-content-center align-items-center">
+        <button class="btn btn-primary" type="submit"> <a style="color: white;"></a>Make me an administrator</a></button>
+    </div>
+    </form>
+
+</body>
+

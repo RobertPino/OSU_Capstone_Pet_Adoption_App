@@ -1,0 +1,70 @@
+<body onload="addQuote()">
+
+<div class = "container-fluid center">
+  <div class="row landing-row">
+      <div class = "col-md-4"> 
+        <h3 style="align-center">Featured Pets!</h3 >
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item item active">
+               <a href="/profile/{{animals.0.id}}">
+                  <img class = "d-block w-100 image-responsive fit-image" src="{{animals.0.pic}}" style="height: 300;">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="/profile/{{animals.1.id}}">
+                  <img class = "d-block w-100 image-responsive fit-image" src="{{animals.1.pic}}" style="height: 300;">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="/profile/{{animals.2.id}}">
+                  <img class = "d-block w-100 image-responsive fit-image" src="{{animals.2.pic}}" style="height: 300;">
+                </a>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      
+      </div>
+      <div class = "col-md-4 d-flex"> 
+        <p class= "quote" id="myQuote"> </p>
+      </div>
+      <div class = "col-md-4 landing-buttons">
+         <a href="/add-a-pet" style="color: white;" class="btn btn-primary btn-block" > Add a Pet  </a> 
+        <a href="/search" style="color: white;" class="btn btn-primary btn-block"> Search Pets </a>
+      </div> 
+  </div>
+  </div>
+  <div class="row landing-row">
+      <div class= "col-lg-12">
+         <h3> Why Adopt? </h3>
+      </div>
+  </div>
+  <div class= "row landing-row">
+    <div class = "col-xs-12 col-sm-6 col-md-6 col-lg-3 d-flex"> 
+      <h1 class="flaticon-pet-friendly"></h1> 
+      <p> 20,000 heatlhy pets get put down every year due to lack of adoptive parents </p>
+      </div>
+     <div class = "col-xs-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+       <h1 class="flaticon-pet-friendly"></h1>
+      <p> Save Money: Adoption fees are less than buying a pet </p>
+      </div>
+    <div class = "col-xs-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+      <h1 class="flaticon-pet-friendly"></h1>
+         <p> PetMatch makes it very easy, only a few clicks and you can find your new best friend </p>
+      </div>
+   <div class = "col-xs-12 col-sm-6 col-md-6 col-lg-3 d-flex"> 
+     <h1 class="flaticon-pet-friendly"></h1>
+      <p> Your adopted pet will be spayed or neutered and up to date on vaccines! </p>
+      </div>
+  </div>
+
+<div> <p style= "font-size: xx-small;">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> <p></p></div>
+</body>

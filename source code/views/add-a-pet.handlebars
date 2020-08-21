@@ -1,0 +1,130 @@
+<body onload="addID()">
+<br><br>
+<div class="container">
+<div><h3><strong>{{this.warning}}</strong></h3></div>
+<div class="addHead">Basic Information</div>
+<form method="POST" action="/add-a-pet" enctype="multipart/form-data">
+    {{!-- Information to send in user ID --}}
+    <input type="hidden" id="idToken" name="idToken">
+    <div class="form-row">
+      <!--basic information-->
+      <div class="form-group col-sm-6 nameColor">
+        <div class="formTitles"><label for="petName">Pet Name</label></div>
+        <input type="text" class="form-control" id="petName" name="petName" placeholder="Name" required>
+      </div>
+      
+    </div>
+
+  <div class="form-row">
+      <!--breed dependent dropdowns-->
+      <div class="form-group col-sm-6 typeColor">
+       <div class="formTitles"><label for="type">Pet Type</label></div>
+        <select class="custom-select" id="type" name="type" placeholder="Type" required> 
+          <option></option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+
+      <div class="form-row">
+      <!--type dependent breed dropdowns-->
+
+
+      <div class="form-group col-md-6 breedColor">
+        <div class="formTitles"><label for="breed">Pet Breed</label></div>
+        <select id="breed" name="breed" class="custom-select" placeholder="Breed" required>
+        </select>
+
+        <label for="otherTypeDiv"></label>
+        <input type="text" class="form-control" id="otherTypeDiv" name="typeOther" placeholder="" required>
+      
+      </div>
+    </div>
+
+<div class="form-row">
+      <!--DOB-->
+      <div class="form-group col-md-6 dateColor">
+         <div class="formTitles"><label for="breed">Date of Birth (Approximate)</label></div>
+<!--datepicker https://gijgo.com/datepicker/example/bootstrap-4 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <input id="datepicker" width="276" name = "birthday">
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+</div></div>
+
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
+<div class="addHead">Disposition</div>
+    <div class="form-row">
+      
+      <br>
+      <!--relational disposition-->
+      <div class="form-group col-md-2 dispColor">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dispKids" name="dispKids">
+          <label class="form-check-label dispText" for="dispKids">Kids</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dispDogs" name="dispDogs"> 
+          <label class="form-check-label dispText" for="dispDogs">Dogs</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dispCats" name="dispCats">
+          <label class="form-check-label dispText" for="dispCats">Cats</label>
+        </div>
+
+         <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dispHouse" name="dispHouse">
+          <label class="form-check-label dispText" for="dispHouse">Home</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dispLeash" name="dispLeash">
+          <label class="form-check-label dispText" for="dispLeash">Leash</label>
+        </div>
+      </div>
+      </div>
+
+<br>
+    <div class="form-row">
+      <!--bio-->
+      <div class="form-group col-md-12">
+      <div class="addHead">Bio</div>
+        <textarea class="form-control" id="description" name ="description" rows="3" required></textarea>
+      </div>
+</div>
+
+    <br>
+    <div class="addHead">Pet Image</div>
+    <br>
+      <div class="form-row">  
+      {{!-- <script src="/js/intakeJS.js"></script> --}}
+      {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><br> --}}
+        <input type='file' name="uploadImg" onchange="readURL(this);" required/>
+        <br><img id="ImdID" src="" class = "image-responsive mx-auto d-block" width="600vw" height="auto">
+      </div>
+    </div>
+
+<br><br><br>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <button class="btn btn-primary" type="submit"> <a style="color: white;"></a>Add Pet to Database</a></button>
+    </div>
+
+    </form>
+</div>
+<br><br><br>
+
+</body>

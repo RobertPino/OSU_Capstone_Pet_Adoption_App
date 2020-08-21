@@ -1,0 +1,13 @@
+{{!-- These two values should be greyed out on the form because they are linked to google account --}}
+
+<body onload="addID()">
+    <h1>Email: <span id="userEmail" name="userEmail"></span> </h1>
+
+    <form method="POST" action="/user">
+        <input type="text" class="form-control" id="summary" name="summary" placeholder="Summary information">
+        <input type="hidden" id="idToken" name="idToken">
+        <input type="submit">Add User to Database</button>
+    </form>
+
+</body>
+

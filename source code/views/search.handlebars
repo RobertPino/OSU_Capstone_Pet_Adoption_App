@@ -1,0 +1,112 @@
+<body onload="addID()">
+  <div><h3><strong>{{this.warning}}</strong></h3></div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 style="text-align: center;"> Pet Gallery </h3>
+      </div>
+    </div>
+    <div class="row" style="margin-top:10px;margin-bottom: 10px;">
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+        <a href="/search" class="btn btn-primary btn-block" role="button" style="color: white;"> All </a> </button>
+      </div>
+
+      <div class="col-sm-2">
+        <a href="/search?type=dog" class="btn btn-primary btn-block" role="button" style="color: white;">
+          Dog</a></button>
+      </div>
+      <div class="col-sm-2">
+        <a href="/search?type=cat" class="btn btn-primary btn-block" role="button" style="color: white;">
+          Cat</a></button>
+      </div>
+      <div class="col-sm-2">
+        <a href="/search?type=other" class="btn btn-primary btn-block" role="button" style="color: white;"> Other</a>
+        </button>
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 form-gallery">
+        <form id="searchForm" action="" method="GET" onsubmit="return removeEmpties()">
+          <h3>Find the perfect pet for you!</h3>
+          <label for="type">Type of pet:</label>
+          <select class="custom-select" name="type" id="type">
+            <option value="" type="hidden"></option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="other">Other</option>
+            <option value="all">All</option>
+          </select>
+          <br>
+          <label for="breed">Breed:</label>
+          <select class="custom-select" name="breed" id="breed">
+          </select>
+
+          <div>
+            <input type="checkbox" id="dispDogs" name="dispDogs">
+            <label for="dispDogs">Good with dogs</label>
+          </div>
+          <div>
+            <input type="checkbox" id="dispCats" name="dispCats">
+            <label for="dispCats">Good with cats</label>
+          </div>
+          <div>
+            <input type="checkbox" id="dispKids" name="dispKids">
+            <label for="dispKids">Good with children</label>
+          </div>
+          <div>
+            <input type="checkbox" id="dispLeash" name="dispLeash">
+            <label for="dispLeash">Good on a leash</label>
+          </div>
+          <div>
+            <input type="checkbox" id="dispHouse" name="dispHouse">
+            <label for="dispHouse">House trained</label>
+          </div>
+          <div>
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Find pet! </button>
+            </div>
+          </div>
+
+        </form>
+        <script>
+
+        </script>
+      </div>
+
+      <div class="col-9 form-gallery">
+        {{!-- Reference: https://getbootstrap.com/docs/4.0/components/card/ --}}
+        <div class="card-deck">
+          {{#each animals}}
+          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+            <img class="card-img-top imgSearch responsive" src="{{this.pic}}" alt="Card image cap">
+            <script>console.log("{{this.pic}}") </script>
+            <div class="card-body text-center">
+              <a href="/profile/{{this.id}}"> {{this.petName}} </a>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 style="text-align: center;"> Didn't find a good match? </h3>
+        <form method="POST" action="/subscribe">
+          <input type="hidden" name="UserID" value="{{this.user.email}}">
+          <input type="hidden" name="idToken" id="idToken">
+          <button class="btn btn-primary btn-lg  mx-auto d-block" style="color: white;">Subscribe</button>
+        </form>
+        <h3 style="text-align: center;"> To get updates on new pets! </h3>
+
+      </div>
+    </div>
+  </div>
+  
+</body>

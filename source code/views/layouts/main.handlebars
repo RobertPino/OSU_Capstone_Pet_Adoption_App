@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<title>{{title}}</title>
+<!-- Include Boostrap -->
+<link href="https://fonts.googleapis.com/css?family=Allan" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/css/ProjectStyle.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/css/flaticon.css" >
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="/">PetMatch</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav mr-auto">
+              <li class = "nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="/search">Search Pets</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="/resources">Resources</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="/add-a-pet" id="addAPet">Add-a-Pet</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="/admin" id="admin">Admin</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="/pending" id="admin">Pending</a>
+              </li>
+             </ul> 
+             <ul class="navbar-nav ml-auto">
+               <li class = "nav-item" id="signOut"> 
+                 <a class="nav-item nav-link nav navbar-nav navbar-right" href="#" onclick="signOut();">Sign out</a>
+               </li>
+              <li class = "nav-item">
+                <a class="g-signin2" data-onsuccess="onSignIn"></a>
+              </li>
+            </div>
+          </div>
+      </nav>
+    </div>
+
+	{{{body}}}
+
+	<!-- jQuery, might noot need this but was recommended to support boostrap -->
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  {{!-- Used for Google Platform Library --}}
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="113184584603-u14ob4lgaf85mvv7a2fvl5ar0h3oicus.apps.googleusercontent.com">
+  <script src="/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
